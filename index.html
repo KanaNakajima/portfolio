@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kana Nakajima Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-  
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+    <link rel='stylesheet' href='/css/common.css' type='text/css' />
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <h1>Kana's portfolio</h1>
+                <a href="#"><h1>Kana's portfolio</h1></a>
             </div>
   
             <div class="menu">
@@ -25,19 +26,19 @@
                  <li><a href="#">About</a></li>
                  <li><a href="#">Works</a></li>
                  <li><a href="#">Skills</a></li>
-                 <li><a href="#">Social Media</a></li>
+                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     
-    <section>
-        
+    <section class="top">
         <img class="img-kana" src="images/kana.png" alt="">
-        
+        <img class="img-small1-clound" src="images/small-cloud.png" alt="">
         <div class="cloud">
         <p>Hi</br>I'm Kana</p>
-        <img class="img-clound" src="images/big-cloud.png" alt="">
+        <img class="img-big-clound" src="images/big-cloud.png" alt="">
+        <img class="img-small2-clound" src="images/small-cloud.png" alt="">
         </div>
         
     </section>
@@ -59,53 +60,166 @@
 
        
     </section> 
-    <section>
+    <section class="work">
 
-        <div class="animate-title">Works</div>    
-        <div class="enjoy-boxes">
-            <a class="prefecture" href="lunch.html"><p class="enjoy">Lunch</p></a>
-            <a class="prefecture" href="omiyage.html"><p class="enjoy">Omiyage</p></a>
-            <a class="prefecture" href="views.html"><p class="enjoy">Views</p></a>   
-        </div>
+        <div class="animate-title">Projects</div>
+        <p>They are my works</p> 
+
+        <div class="box">  
+            <div class="work">
+                <a class="work1" href="work1.html"><img class="img-work" src="images/animalSounds.png" width="10" alt=""></a>
+                <p class="work1">Animal Sounds</p>
+            </div>
+            <div class="work">
+                <a class="work2" href="work2.html"><img class="img-work" src="images/dummy.png" alt=""> </a>
+                <p class="work2">Portfolio</p>
+            </div>
+            <div class="work">
+                <a class="work3" href="work3.html"><img class="img-work" src="images/dummy.png" alt=""> </a>
+                <p class="work3">Coming soon</p>
+            </div>
+            <div class="work">
+                <a class="work4" href="work4.html"><img class="img-work" src="images/dummy.png" alt=""></a> 
+                <p class="work4">Coming soon</p>
+            </div>
+            <div class="work">
+                <a class="work5" href="work5.html"><img class="img-work" src="images/dummy.png" alt=""></a>
+                <p class="work5">Coming soon</p>
+            </div>
+            <div class="work">
+                <a class="work6" href="work6.html"><img class="img-work" src="images/dummy.png" alt=""></a>
+                <p class="work6">Coming soon</p>
+            </div>
+        </div>   
         
     </section> 
-    <section class="enjoy">
+    <section class="skills">
+        <div class="animate-title">Skills</div>  
+        <p>I am corrently working as a system engineer, and also I develop web apps for fun.</br>
+           I am learning some languages beyond the frontedend and backend. 
+        </p>  
+        <ul class="skill-box">
+            <li class="box1">
+                <p class="skill"><i class="fas fa-desktop"></i> Frontedend</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col"> Skills</th>
+                            <th scope="col"> Experience</th>
+                            <th scope="col"> Self </br>Assesment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">HTML</th>
+                            <td>1 year</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CSS</th>
+                            <td>1 year</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Javascript</th>
+                            <td>1 year</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">JQuery</th>
+                            <td>1 year</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-
-        <div class="animate-title">Skills</div>    
-        <ul class="prepare-boxes">
-            <li class="box">
-                <p class="prepare">Turn in TozanTodoke</p>
             </li>
-            <li class="box">
-                <p class="prepare">Check the pass you go</p>
+            <li class="box1">
+                <p class="skill"><i class="fab fa-android"></i> Android</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col"> Skills</th>
+                            <th scope="col"> Experience</th>
+                            <th scope="col"> Self </br>Assesment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Flutter</th>
+                            <td>1 year</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Firebase</th>
+                            <td>1 year</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                    </tbody>
+                </table>
             </li>
-            <li class="box">
-                <p class="prepare">Check the temperature and ware proper clothes</p>
+            <li class="box1">
+                <p class="skill"><i class="fas fa-desktop"></i> Backend</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col"> Skills</th>
+                            <th scope="col"> Experience</th>
+                            <th scope="col"> Self </br>Assesment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Java</th>
+                            <td>1 year</td>
+                            <td>★★☆☆☆</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Springboot</th>
+                            <td>1 year</td>
+                            <td>★★☆☆☆</td>
+                        </tr>
+                    </tbody>
+                </table>
             </li>
         </ul>
 
     </section>
-    <section class="enjoy">
+    <section class="contact">
 
 
-        <div class="animate-title">Social Media and Contacts</div>    
-        <ul class="prepare-boxes">
-            <li class="github">
-                
-            </li>
-            <li class="stackoverflow">
-                
-            </li>
-            <li class="Qiita">
-                
-            </li>
-        </ul>
+        <div class="animate-title">Contact</div> 
+        <p>I'd like to hear from you. </br>
+           If you have an inquiry, please fill in the form below. 
+        </p>    
+        <div class="container">
+            <form action="action_page.php">
+          
+              <label for="fname">First Name</label></br>
+              <input type="text" id="fname" name="firstname" placeholder="Your name.."></br>
+          
+              <label for="lname">Last Name</label></br>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name.."></br>
+          
+              
+          
+              <label for="subject">Subject</label></br>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
 
     </section>
      
     <!-- footer -->
     <footer>
+        <ul class="sns">
+            <li><i class="fab fa-linkedin"></i></li>
+            <li><i class="fab fa-github"></i></li>
+            <li></li>
+         </ul>
         <p class="footer-text">© All rights reserved by KanaNakajima</p>
     </footer>   
     <script src="main.js"></script> 

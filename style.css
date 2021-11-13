@@ -25,7 +25,7 @@ nav {
   background: var(--nav-background);
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .logo h1 {
@@ -33,6 +33,14 @@ nav {
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #F8F3D4;
+}
+
+.logo h1:hover {
+  color: #392F2F;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* nav-links */
@@ -57,9 +65,12 @@ nav {
 
 .nav-links li a {
   font-size: 20px;
-  text-decoration: none;
   color: #F8F3D4;
   position: relative;
+}
+
+.nav-links li a:hover {
+  color: #392F2F;
 }
 
 /* menu */
@@ -164,7 +175,6 @@ nav {
 }
 
 .nav-links li a {
-  text-decoration: none;
   color: #F8F3D4;
   position: relative;
 }
@@ -252,6 +262,10 @@ nav {
   }
 }
 
+.top {
+  position: relative;
+}
+
 .img-kana {
   display: inline-block;
   margin-left: 0;
@@ -273,11 +287,31 @@ nav {
   margin: 0;
   padding: 0;
   font-size: 5em;
+  z-index: 1;
 }
 
-.img-clound {
-  margin-top: 20px;
+.img-big-clound {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 50%;
+}
+
+.img-small1-clound {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  margin-top: 30px;
+  width: 20%;
+}
+
+.img-small2-clound {
+  position: absolute;
+  top: 70%;
+  left: 75%;
+  width: 20%;
 }
 
 .flexbox {
@@ -326,6 +360,22 @@ body {
   text-align: left;
 }
 
+.box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  row-gap: 1em;
+  margin-top: 100px;
+}
+
+.work img {
+  width: 20%;
+  margin: 10px;
+}
+
 .prefecture-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,8 +392,6 @@ a.prefecture {
 
 a.prefecture:hover {
   color: #392F2F;
-  text-decoration: none;
-  /* リンクに出てくる下線を無効にする*/
 }
 
 .enjoy-boxes {
@@ -374,8 +422,7 @@ a.prefecture:hover {
   background-color: #651B1B;
 }
 
-.prepare-boxes {
-  padding: 2.5% 0;
+.skill-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,36 +434,71 @@ a.prefecture:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  list-style: none;
 }
 
-.prepare-boxes > * {
+.laptop-solid.icon {
+  color: #fff;
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 3px;
+  width: 12px;
+  height: 8px;
+  border-radius: 2px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+
+.laptop-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  bottom: -5px;
+  width: 18px;
+  height: 1px;
+  border-radius: 0 0 2px 2px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+
+.skills p, .work p, .contact p {
+  font-size: 20px;
+  color: #000;
+}
+
+.skill-box > * {
+  margin-top: 5%;
   min-width: 8%;
   background: #fff;
-  font-size: 64px;
-  width: 400px;
+  width: 30%;
   height: 500px;
-  text-align: center;
   background-color: #651B1B;
 }
 
-p.prepare {
-  color: #392F2F;
-  font-size: 20px;
-}
-
-.mountain-name {
-  margin-bottom: 5px;
-}
-
-p.explanation {
-  text-align: left;
-  font-size: 20px;
-}
-
-p.enjoy {
+.box {
   text-align: center;
-  color: #F8F3D4;
+}
+
+p.skill {
+  color: #fff;
+  font-size: 20px;
   font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+thead,
+tbody {
+  color: #fff;
+}
+
+table {
+  margin: auto;
+  margin-top: 20px;
+  border-collapse: collapse;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  font-size: 20px;
 }
 
 section {
@@ -469,5 +551,86 @@ ul.items {
   width: 500px;
   margin: auto;
   background-color: #59A985;
+}
+
+/************************************
+** お問い合わせフォームの入力
+************************************/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #651B1B;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+}
+
+input[type=submit] {
+  text-align: center;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #F8F3D4;
+}
+
+input[type=text], textarea {
+  width: 100%;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  width: 80%;
+  margin: 20px auto auto auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+form {
+  text-align: left;
+  width: 80%;
+  margin: auto;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  display: table;
+  background-color: #651B1B;
+}
+
+footer .sns li {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+}
+
+.footer-text {
+  color: #F8F3D4;
+  display: table-cell;
 }
 /*# sourceMappingURL=style.css.map */
