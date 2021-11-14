@@ -310,7 +310,6 @@ body {
     margin-left: 2em;
 }
 .about{
-
   font-size: 30px;
   text-align: left;
   //position: absolute;
@@ -322,9 +321,13 @@ body {
   // margin: 0;
   // padding: 0;
 }
+.about ul{
+  text-align: center;
+}
 .about li{
   font-size: 20px;
   text-align: left;
+  
 }
 .box-cv{
   margin-top: 8%;
@@ -354,9 +357,17 @@ a.cv:hover{
   margin: 100px auto;
 }
 
-.work img{
-  width: 40%;
-  margin: 10px;
+// .work img{
+//   width: 40%;
+//   margin: 10px;
+// }
+.img-work1 {
+   width: 30%;
+}
+.img-work2 {
+  width: 70%;
+  border: #000;
+  vertical-align: middle;
 }
 
 .prefecture-container{
