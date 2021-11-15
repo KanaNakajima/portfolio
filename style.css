@@ -350,19 +350,17 @@ body {
 
 .about {
   font-size: 30px;
-  text-align: left;
+  text-align: center;
   margin-top: 3%;
   margin-left: 30%;
   vertical-align: middle;
-}
-
-.about ul {
-  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .about li {
   font-size: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 .box-cv {
@@ -387,13 +385,46 @@ a.cv:hover {
 .box {
   display: -ms-grid;
   display: grid;
+  grid-gap: 5px;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   -webkit-column-gap: 5px;
           column-gap: 5px;
   row-gap: 1em;
   width: 80%;
-  margin: 100px auto;
+  margin: 50px auto 50px auto;
+}
+
+@media screen and (max-width: 768px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+  .box {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+    -webkit-column-gap: 5px;
+            column-gap: 5px;
+    row-gap: 1em;
+    width: 80%;
+    margin: 10% auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .box {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -webkit-column-gap: 5px;
+            column-gap: 5px;
+    row-gap: 1em;
+    width: 80%;
+    margin: 30px auto 50px auto;
+  }
 }
 
 .img-work1 {
@@ -401,9 +432,14 @@ a.cv:hover {
 }
 
 .img-work2 {
-  width: 70%;
+  width: 90%;
   border: #000;
   vertical-align: middle;
+}
+
+.img-work {
+  width: 90%;
+  margin: 10px;
 }
 
 .prefecture-container {
@@ -450,21 +486,6 @@ a.prefecture:hover {
   display: table-cell;
   vertical-align: middle;
   background-color: #651B1B;
-}
-
-.skill-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  list-style: none;
 }
 
 .laptop-solid.icon {
@@ -515,16 +536,13 @@ h1.animate-title {
 }
 
 .skill-box > * {
-  margin-top: 5%;
-  min-width: 8%;
-  background: #fff;
-  width: 30%;
-  height: 500px;
+  margin: auto;
+  width: 350px;
+  height: 300px;
   background-color: #651B1B;
-}
-
-.box {
-  text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 p.skill {
@@ -533,6 +551,37 @@ p.skill {
   font-size: 30px;
   text-align: center;
   margin-top: 10px;
+}
+
+.skill-box {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  row-gap: 1em;
+  width: 80%;
+  margin: 50px auto;
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+  .skill-box {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -webkit-column-gap: 5px;
+            column-gap: 5px;
+    row-gap: 1em;
+    width: 80%;
+    margin: 50px auto 50px auto;
+    list-style: none;
+  }
 }
 
 thead,
@@ -546,7 +595,34 @@ table {
   border-collapse: collapse;
   letter-spacing: 1px;
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 15px;
+}
+
+.skills > p, .work > p, .contact > p {
+  margin-top: 20px;
+}
+
+section.work {
+  height: 120vh;
+}
+
+@media screen and (max-width: 768px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+  section.work {
+    height: 120vh;
+  }
+  section.skills {
+    height: 160vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section.work {
+    height: 260vh;
+  }
+  section.skills {
+    height: 180vh;
+  }
 }
 
 section {
@@ -588,17 +664,6 @@ ul.items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.item {
-  display: block;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  height: 600px;
-  width: 500px;
-  margin: auto;
-  background-color: #59A985;
 }
 
 /************************************

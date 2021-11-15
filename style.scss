@@ -311,7 +311,7 @@ body {
 }
 .about{
   font-size: 30px;
-  text-align: left;
+  text-align: center; 
   //position: absolute;
   // top: 50%;
   margin-top: 3%;
@@ -320,14 +320,13 @@ body {
   // transform: translate(-50%, -50%);
   // margin: 0;
   // padding: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
-.about ul{
-  text-align: center;
-}
+
 .about li{
   font-size: 20px;
-  text-align: left;
-  
+  text-align: center; 
 }
 .box-cv{
   margin-top: 8%;
@@ -350,24 +349,53 @@ a.cv:hover{
 
 .box{
   display: grid;
+  grid-gap: 5px;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 5px;
   row-gap: 1em;
   width: 80%;
-  margin: 100px auto;
+  margin: 50px auto 50px auto;
+}
+@media screen and (max-width:768px) {
+	/* 481px以上に適用されるCSS（タブレット用） */
+  .box{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 50%);
+    column-gap: 5px;
+    row-gap: 1em;
+    width: 80%;
+    margin: 10% auto;
+  }
 }
 
-// .work img{
-//   width: 40%;
-//   margin: 10px;
-// }
+@media screen and (max-width:480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .box{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 5px;
+    row-gap: 1em;
+    width: 80%;
+    margin: 30px auto 50px auto;
+  }
+}
+
+
+
 .img-work1 {
    width: 30%;
 }
 .img-work2 {
-  width: 70%;
+  width: 90%;
   border: #000;
   vertical-align: middle;
+}
+
+.img-work{
+  width: 90%;
+  margin: 10px;
 }
 
 .prefecture-container{
@@ -404,15 +432,7 @@ a.prefecture:hover{
 }
 
 
-.skill-box{
-  // padding: 2.5% 0;
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  justify-content: space-evenly;
-  
-  list-style: none;
-}
+
 .laptop-solid.icon {
   color: #fff;
   position: absolute;
@@ -459,17 +479,17 @@ h1.animate-title{
 }
 
 .skill-box> *{
-  margin-top: 5%;
-  min-width: 8%;
-  background: #fff;
-  width        : 30%;
-  height       : 500px;
+  margin: auto;
+  // min-width: 8%;
+ 
+  width        : 350px;
+  height       : 300px;
   // text-align: center;
   background-color: #651B1B;
+  justify-content: space-evenly; 
 }
-.box{
-  text-align: center;
-}
+
+
 p.skill{
   color: #fff;
   font-size: 20px;
@@ -478,6 +498,57 @@ p.skill{
   margin-top: 10px;
 }
 
+// .skill-box{
+//   list-style: none;
+//   display: grid;
+//   grid-gap: 5px;
+//   grid-template-columns: repeat(3, 30%);
+//   column-gap: 5px;
+//   row-gap: 1em;
+//   width: 80%;
+//   margin: 50px auto 50px auto;
+//   position: relative;
+//   flex-direction: row;
+//   justify-content: space-evenly; 
+//   list-style: none;
+//   display: flex;
+// }
+
+.skill-box{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5px;
+  row-gap: 1em;
+  width: 80%;
+  margin: 50px auto;
+  list-style: none;
+}
+@media screen and (max-width:768px) {
+	/* 481px以上に適用されるCSS（タブレット用） */
+  .skill-box{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 5px;
+    row-gap: 1em;
+    width: 80%;
+    margin: 50px auto 50px auto;
+    
+    list-style: none;
+  }
+}
+
+
+
+
+// .skill-box{
+//   display: flex;
+//   position: relative;
+//   flex-direction: row;
+//   justify-content: space-evenly; 
+//   list-style: none;
+// }
 
 thead,
 tbody {
@@ -489,8 +560,39 @@ table {
   border-collapse: collapse;
   letter-spacing: 1px;
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 15px;
 }
+
+.skills>p , .work>p, .contact>p{
+  margin-top: 20px;
+  
+}
+section.work {
+  height: 120vh;
+}
+@media screen and (max-width:768px){
+	/* 481px以上に適用されるCSS（タブレット用） */
+  section.work {
+    height: 120vh;
+  }
+  section.skills {
+    height: 160vh;
+  }
+}
+
+@media screen and (max-width:480px){
+  section.work {
+    height: 260vh;
+  }
+  section.skills {
+    height: 180vh;
+  }
+  
+}
+
+
+
+
 
 section{
     text-align: center;
@@ -524,15 +626,15 @@ ul.items {
     display: flex;
 }
 
-.item {
-  display: block;
-    justify-content: space-evenly;
-    height: 600px;
-    width: 500px;
-    margin: auto;
-    background-color: #59A985;
-    // border-radius: 10%;
-} 
+// .item {
+//   display: block;
+//     justify-content: space-evenly;
+//     height: 600px;
+//     width: 500px;
+//     margin: auto;
+//     background-color: #59A985;
+//     // border-radius: 10%;
+// } 
 
 /************************************
 ** お問い合わせフォームの入力
