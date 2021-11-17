@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/************************************
+** For all components
+************************************/
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +10,68 @@
   font-family: share;
 }
 
-:root {
-  --nav-height: 10vh;
-  --nav-background: #ccc;
+a {
+  text-decoration: none;
 }
 
+.animate-title {
+  color: #000;
+  font-size: 50px;
+  text-align: left;
+  margin-left: 2em;
+}
+
+:root {
+  --nav-height: 10vh;
+  --nav-background: #651B1B;
+}
+
+.skills > p, .work > p, .contact > p {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+  section.work {
+    height: 120vh;
+  }
+  section.skills {
+    height: 160vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section.work {
+    height: 260vh;
+  }
+  section.skills {
+    height: 180vh;
+  }
+}
+
+section {
+  text-align: center;
+  position: relative;
+  padding-top: 20px;
+  height: 100vh;
+}
+
+section:nth-child(2),
+section:nth-child(4),
+section:nth-child(6),
+section:nth-child(8) {
+  background-color: #F2D6C7;
+}
+
+section:nth-child(3),
+section:nth-child(5),
+section:nth-child(7) {
+  background-color: #F8F3D4;
+}
+
+/******************
+      Header
+******************/
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,6 +89,7 @@ nav {
 }
 
 .logo h1 {
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -37,10 +98,6 @@ nav {
 
 .logo h1:hover {
   color: #392F2F;
-}
-
-a {
-  text-decoration: none;
 }
 
 /* nav-links */
@@ -95,14 +152,6 @@ a {
           transform-origin: left;
 }
 
-.menu .bar1 {
-  margin-bottom: 5px;
-}
-
-.menu .bar3 {
-  margin-top: 5px;
-}
-
 .menu.toggle .bar1 {
   -webkit-transform-origin: left;
           transform-origin: left;
@@ -120,38 +169,6 @@ a {
           transform-origin: left;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-:root {
-  --nav-height: 10vh;
-  --nav-background: #651B1B;
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: var(--nav-height);
-  background: var(--nav-background);
-}
-
-.logo h1 {
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 3px;
 }
 
 /* nav-links */
@@ -262,7 +279,10 @@ nav {
   }
 }
 
-.top {
+/***************
+　　 top
+****************/
+.top section {
   position: relative;
 }
 
@@ -319,35 +339,62 @@ nav {
   height: 400px;
 }
 
-div.intro {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #F8F3D4;
-  font-size: 25px;
-  text-align: left;
-  height: 200px;
-  width: 1200px;
-  background-color: #59A985;
-  margin-left: auto;
-  /* 【ポイント】*/
-  margin-right: auto;
-  /* 【ポイント】*/
-  margin: 10px auto;
-}
-
-body {
-  font-family: 'Wendy One', Times, serif;
-  margin: 0px;
-}
-
-.animate-title {
+a.scroll {
+  padding-top: 70px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
   color: #000;
-  font-size: 50px;
-  text-align: left;
-  margin-left: 2em;
+  font-size: medium;
 }
 
+span.scroll, cloud > a {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 2s infinite;
+  animation: sdb 2s infinite;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+@keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+            transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+            transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+            transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+/***************
+　　 about
+****************/
 .about {
   font-size: 30px;
   text-align: center;
@@ -427,6 +474,9 @@ a.cv:hover {
   }
 }
 
+/***************
+　　projects
+****************/
 .img-work1 {
   width: 30%;
 }
@@ -442,97 +492,21 @@ a.cv:hover {
   margin: 10px;
 }
 
-.prefecture-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin: 10px;
-}
-
-a.prefecture {
-  font-size: 25px;
-}
-
-a.prefecture:hover {
-  color: #392F2F;
-}
-
-.enjoy-boxes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.enjoy-boxes > * {
-  min-width: 8%;
-  background: #fff;
-  font-size: 64px;
-  width: 300px;
-  height: 300px;
-  margin: 10px;
-  display: table-cell;
-  vertical-align: middle;
-  background-color: #651B1B;
-}
-
-.laptop-solid.icon {
-  color: #fff;
-  position: absolute;
-  margin-left: 4px;
-  margin-top: 3px;
-  width: 12px;
-  height: 8px;
-  border-radius: 2px;
-  border: solid 1px currentColor;
-  background-color: currentColor;
-}
-
-.laptop-solid.icon:before {
-  content: '';
-  position: absolute;
-  left: -4px;
-  bottom: -5px;
-  width: 18px;
-  height: 1px;
-  border-radius: 0 0 2px 2px;
-  border: solid 1px currentColor;
-  background-color: currentColor;
-}
-
-h1.animate-title {
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  margin: auto;
-  margin-bottom: 3%;
-}
-
-.animate-title:before {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  display: inline-block;
-  width: 60px;
-  height: 5px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color: black;
-  border-radius: 2px;
-  margin: auto;
+/***************
+　　 skills
+****************/
+.skill-box {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  row-gap: 1em;
+  width: 80%;
+  margin: 50px auto;
+  list-style: none;
 }
 
 .skill-box > * {
@@ -551,20 +525,6 @@ p.skill {
   font-size: 30px;
   text-align: center;
   margin-top: 10px;
-}
-
-.skill-box {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 5px;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -webkit-column-gap: 5px;
-          column-gap: 5px;
-  row-gap: 1em;
-  width: 80%;
-  margin: 50px auto;
-  list-style: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -598,68 +558,6 @@ table {
   font-size: 15px;
 }
 
-.skills > p, .work > p, .contact > p {
-  margin-top: 20px;
-}
-
-section.work {
-  height: 120vh;
-}
-
-@media screen and (max-width: 768px) {
-  /* 481px以上に適用されるCSS（タブレット用） */
-  section.work {
-    height: 120vh;
-  }
-  section.skills {
-    height: 160vh;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  section.work {
-    height: 260vh;
-  }
-  section.skills {
-    height: 180vh;
-  }
-}
-
-section {
-  text-align: center;
-  position: relative;
-  padding-top: 20px;
-  height: 100vh;
-}
-
-section:nth-child(2) {
-  background-color: #F2D6C7;
-}
-
-section:nth-child(3) {
-  background-color: #F8F3D4;
-}
-
-section:nth-child(4) {
-  background-color: #F2D6C7;
-}
-
-section:nth-child(5) {
-  background-color: #F8F3D4;
-}
-
-section:nth-child(6) {
-  background-color: #F2D6C7;
-}
-
-section:nth-child(7) {
-  background-color: #F8F3D4;
-}
-
-section:nth-child(8) {
-  background-color: #F2D6C7;
-}
-
 ul.items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -667,9 +565,8 @@ ul.items {
 }
 
 /************************************
-** お問い合わせフォームの入力
+   お問い合わせフォームの入力
 ************************************/
-/* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%;
   /* Full width */
@@ -689,7 +586,6 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
-/* Style the submit button with a specific background color etc */
 input[type=submit] {
   background-color: #651B1B;
   color: white;
@@ -704,7 +600,6 @@ input[type=submit] {
   text-align: center;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   background-color: #F8F3D4;
 }
@@ -713,7 +608,6 @@ input[type=text], textarea {
   width: 100%;
 }
 
-/* Add a background color and some padding around the form */
 .container {
   width: 80%;
   margin: 20px auto auto auto;
@@ -728,6 +622,9 @@ form {
   margin: auto;
 }
 
+/***************
+　　 footer
+****************/
 footer {
   width: 100%;
   height: 100px;

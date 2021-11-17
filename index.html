@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <link rel='stylesheet' href='/css/common.css' type='text/css' />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -36,13 +37,15 @@
         <img class="img-kana" src="images/kana.png" alt="">
         <img class="img-small1-clound" src="images/small-cloud.png" alt="">
         <div class="cloud">
-        <p>Hi</br>I'm Kana</p>
-        <img class="img-big-clound" src="images/big-cloud.png" alt="">
-        <img class="img-small2-clound" src="images/small-cloud.png" alt="">
+            <p>Hi</br>I'm Kana</p>
+            <img class="img-big-clound" src="images/big-cloud.png" alt="">
+            <img class="img-small2-clound" src="images/small-cloud.png" alt="">
+            <a  class="scroll" href="#about"><span class="scroll"></span>Scroll</a>
         </div>
+       
         
     </section>
-    <section>
+    <section id="about">
 
         <h1 class="animate-title">About</h1>
          <div class="about"><i class="far fa-building"></i> WORK EXPERIENCE</div>
@@ -232,6 +235,7 @@
         </div>
         <p class="footer-text">© All rights reserved by KanaNakajima</p>
     </footer>   
-    <script src="main.js"></script> 
+    <script src="main.js"></script>
+    <script src="scrollToTop.js"></script>  
 </body>
 </html>
