@@ -32,7 +32,7 @@ a {
 
 @media screen and (max-width: 768px) {
   /* 481px以上に適用されるCSS（タブレット用） */
-  section.work {
+  section#work {
     height: 120vh;
   }
   section#skills {
@@ -41,10 +41,10 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-  section.work {
+  section#work {
     height: 260vh;
   }
-  #skills section {
+  section#skills {
     height: 180vh;
   }
 }
@@ -478,11 +478,11 @@ a.cv:hover {
 　　projects
 ****************/
 .img-work1 {
-  width: 30%;
+  width: 90%;
 }
 
 .img-work2 {
-  width: 90%;
+  width: 100%;
   border: #000;
   vertical-align: middle;
 }
