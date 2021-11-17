@@ -1,6 +1,6 @@
 $(function(){
     // #で始まるリンクをクリックしたら実行されます
-    $('a[href^="#about"]').click(function() {
+    $('a[href^="#"]').click(function() {
     
       var adjust = 0 ; // 変更
       // スクロールの速度

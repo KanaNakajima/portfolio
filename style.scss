@@ -22,7 +22,7 @@ a{
   --nav-height: 10vh;
   --nav-background: #651B1B;
 }
-.skills>p, .work>p, .contact>p{
+#skills>p, #work>p, #contact>p{
   margin-top: 20px;
 }
 @media screen and (max-width:768px){
@@ -30,7 +30,7 @@ a{
   section.work {
     height: 120vh;
   }
-  section.skills {
+  section#skills {
     height: 160vh;
   }
 }
@@ -39,7 +39,7 @@ a{
   section.work {
     height: 260vh;
   }
-  section.skills {
+#skills section{
     height: 180vh;
   }
 }
