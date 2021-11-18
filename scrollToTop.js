@@ -1,3 +1,5 @@
+
+//scrollToTop
 $(function(){
     // #で始まるリンクをクリックしたら実行されます
     $('a[href^="#"]').click(function() {
@@ -9,6 +11,19 @@ $(function(){
       let target = $(href == "#" || href == "" ? 'html' : href);
       let position = target.offset().top + adjust - 90;
       
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+    });
+  });
+
+
+  //SlideIn
+  $(function(){
+    $('a[href^="#"]').click(function() {
+      var speed = 400; // スクロールスピード(ミリ秒)
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
       $('body,html').animate({scrollTop:position}, speed, 'swing');
       return false;
     });

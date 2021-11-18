@@ -61,6 +61,28 @@ section:nth-child(7)  {
     background-color: #F8F3D4;
 }
 
+h1.animate-title{
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  margin-bottom: 3%;
+}
+.animate-title:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  display: inline-block;
+  width: 60px;
+  height: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: black;
+  border-radius: 2px;
+  margin: auto;
+}
+
 /******************
       Header
 ******************/
@@ -240,7 +262,19 @@ nav {
 ****************/
 .top section{
   position:relative;
+  
 }
+
+/* CSSアニメーションの設定 */
+@keyframes slidein {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
 .img-kana{
   display: inline-block;
   margin-left: 0;
@@ -249,19 +283,44 @@ nav {
   bottom:0%; 
   left:0%; 
 }
-.cloud p{
+ .intro1{ 
+  animation: SlideIn 1.0s ease-in-out .5s;
+
   font-family: share;
   text-align: left;
   color: #000;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 40%;
   margin: 0;
   padding: 0;
   font-size: 5em;
   z-index:1;
 }
+.intro2{ 
+  animation: SlideIn 1.8s ease-in-out .5s;
+  font-family: share;
+  text-align: left;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  margin: 0;
+  padding: 0;
+  font-size: 5em;
+  z-index:1;
+}
+@keyframes SlideIn {
+  0% {
+    opacity: 0;/*初期状態では透明に*/
+    transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .img-big-clound{
   position: absolute;
   top: 55%;
@@ -311,6 +370,27 @@ span.scroll, cloud> a {
   box-sizing: border-box;
 }
 
+
+@media screen and (max-width:480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  span.scroll, cloud> a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+    box-sizing: border-box;
+  }
+}
+
+//scroll function
 @-webkit-keyframes sdb {
   0% {
     -webkit-transform: rotate(-45deg) translate(0, 0);
@@ -410,7 +490,7 @@ a.cv:hover{
    width: 90%;
 }
 .img-work2 {
-  width: 100%;
+  width: 90%;
   border: #000;
   vertical-align: middle;
 }
@@ -433,11 +513,8 @@ a.cv:hover{
 }
 .skill-box> *{
   margin: auto;
-  // min-width: 8%;
- 
   width        : 350px;
   height       : 300px;
-  // text-align: center;
   background-color: #651B1B;
   justify-content: space-evenly; 
 }
