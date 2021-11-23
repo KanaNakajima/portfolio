@@ -22,6 +22,11 @@ a{
   --nav-height: 10vh;
   --nav-background: #651B1B;
 }
+
+
+
+
+
 #skills>p, #work>p, #contact>p{
   margin-top: 20px;
 }
@@ -67,6 +72,25 @@ h1.animate-title{
   display: inline-block;
   margin: auto;
   margin-bottom: 3%;
+  animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+
+
+// h1.animate-title.slidein.is-animated {
+//   animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+// }
+ 
+@keyframes slideIn {
+  0% {
+    transform: translateX(180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+  40%,100% {
+    opacity: 1;
+  }
 }
 .animate-title:before {
   content: '';
@@ -285,7 +309,6 @@ nav {
 }
  .intro1{ 
   animation: SlideIn 1.0s ease-in-out .5s;
-
   font-family: share;
   text-align: left;
   color: #000;
@@ -450,7 +473,7 @@ a.cv:hover{
 .box{
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 5px;
   row-gap: 1em;
   width: 80%;

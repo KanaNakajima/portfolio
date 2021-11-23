@@ -75,6 +75,38 @@ h1.animate-title {
   display: inline-block;
   margin: auto;
   margin-bottom: 3%;
+  -webkit-animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+          animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(180px);
+            transform: translateX(180px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  40%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(180px);
+            transform: translateX(180px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  40%, 100% {
+    opacity: 1;
+  }
 }
 
 .animate-title:before {
@@ -537,8 +569,8 @@ a.cv:hover {
   display: -ms-grid;
   display: grid;
   grid-gap: 5px;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   -webkit-column-gap: 5px;
           column-gap: 5px;
   row-gap: 1em;
