@@ -445,6 +445,16 @@ nav {
   left: 20%;
   margin-top: 30px;
   width: 20%;
+  -webkit-animation-name: anim_h;
+          animation-name: anim_h;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
 }
 
 .img-small2-clound {
@@ -452,6 +462,61 @@ nav {
   top: 70%;
   left: 75%;
   width: 20%;
+  -webkit-animation-name: anim_h;
+          animation-name: anim_h;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+/* 回転するアニメーション */
+@-webkit-keyframes anim_h {
+  0% {
+    -webkit-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+  }
+  100% {
+    -webkit-transform: translate(30px, 0);
+            transform: translate(30px, 0);
+  }
+}
+@keyframes anim_h {
+  0% {
+    -webkit-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+  }
+  100% {
+    -webkit-transform: translate(30px, 0);
+            transform: translate(30px, 0);
+  }
+}
+
+/* 無限ふわふわ */
+.anime-fuwafuwa1 {
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+}
+
+.anime-fuwafuwa2 {
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 1.7s;
+          animation-duration: 1.7s;
 }
 
 .flexbox {
