@@ -12,20 +12,16 @@
 a{
   text-decoration: none;
 }
-.animate-title {
-  color: #000;
-  font-size: 50px;
-  text-align: left;
-  margin-left: 2em;
-}
+// .animate-title {
+//   color: #000;
+//   font-size: 50px;
+//   text-align: left;
+//   margin-left: 2em;
+// }
 :root {
   --nav-height: 10vh;
   --nav-background: #651B1B;
 }
-
-
-
-
 
 #skills>p, #work>p, #contact>p{
   margin-top: 20px;
@@ -65,20 +61,6 @@ section:nth-child(5),
 section:nth-child(7)  {
     background-color: #F8F3D4;
 }
-
-h1.animate-title{
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  margin: auto;
-  margin-bottom: 3%;
-  animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-}
-
-
-// h1.animate-title.slidein.is-animated {
-//   animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-// }
  
 @keyframes slideIn {
   0% {
@@ -92,7 +74,7 @@ h1.animate-title{
     opacity: 1;
   }
 }
-.animate-title:before {
+.fadein:before {
   content: '';
   position: absolute;
   bottom: -15px;
@@ -106,6 +88,23 @@ h1.animate-title{
   border-radius: 2px;
   margin: auto;
 }
+/* 画面外にいる状態 */
+.fadein {
+  font-size: 30px;
+	opacity : 0.1;
+	transform : translate(0, 50px);
+	transition : all 1000ms;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin: auto;
+	}
+
+/* 画面内に入った状態 */
+.fadein.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
 
 /******************
       Header

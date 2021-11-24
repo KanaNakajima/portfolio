@@ -14,13 +14,6 @@ a {
   text-decoration: none;
 }
 
-.animate-title {
-  color: #000;
-  font-size: 50px;
-  text-align: left;
-  margin-left: 2em;
-}
-
 :root {
   --nav-height: 10vh;
   --nav-background: #651B1B;
@@ -69,16 +62,6 @@ section:nth-child(7) {
   background-color: #F8F3D4;
 }
 
-h1.animate-title {
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  margin: auto;
-  margin-bottom: 3%;
-  -webkit-animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-          animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-}
-
 @-webkit-keyframes slideIn {
   0% {
     -webkit-transform: translateX(180px);
@@ -109,7 +92,7 @@ h1.animate-title {
   }
 }
 
-.animate-title:before {
+.fadein:before {
   content: '';
   position: absolute;
   bottom: -15px;
@@ -122,6 +105,27 @@ h1.animate-title {
   background-color: black;
   border-radius: 2px;
   margin: auto;
+}
+
+/* 画面外にいる状態 */
+.fadein {
+  font-size: 30px;
+  opacity: 0.1;
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin: auto;
+}
+
+/* 画面内に入った状態 */
+.fadein.scrollin {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 /******************

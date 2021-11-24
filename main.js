@@ -1,5 +1,12 @@
-const menu = document.querySelector('.menu');
-
-menu.addEventListener('click', function() {
-     this.classList.toggle('toggle');
+$(function(){
+	$(window).scroll(function (){
+		$('.fadein').each(function(){
+			var elemPos = $(this).offset().top;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > elemPos - windowHeight + 200){
+				$(this).addClass('scrollin');
+			}
+		});
+	});
 });
