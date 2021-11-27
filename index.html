@@ -9,6 +9,10 @@
     <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <link rel='stylesheet' href='/css/common.css' type='text/css' />
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+
 </head>
 <body>
     <header>
@@ -119,88 +123,30 @@
         <ul class="skill-box">
             <li class="box1">
                 <p class="skill"><i class="fas fa-desktop"></i> Frontedend</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col"> Skills</th>
-                            <th scope="col"> Experience</th>
-                            <th scope="col"> Self </br>Assesment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">HTML</th>
-                            <td>1 year</td>
-                            <td>★★★★☆</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">CSS</th>
-                            <td>1 year</td>
-                            <td>★★★★☆</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Javascript</th>
-                            <td>1 year</td>
-                            <td>★★★★☆</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">JQuery</th>
-                            <td>1 year</td>
-                            <td>★★★★☆</td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                
             </li>
             <li class="box1">
                 <p class="skill"><i class="fab fa-android"></i> Android</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col"> Skills</th>
-                            <th scope="col"> Experience</th>
-                            <th scope="col"> Self </br>Assesment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Flutter</th>
-                            <td>1 year</td>
-                            <td>★★★★☆</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Firebase</th>
-                            <td>1 year</td>
-                            <td>★★★★☆</td>
-                        </tr>
-                    </tbody>
-                </table>
+                
             </li>
             <li class="box1">
                 <p class="skill"><i class="fas fa-desktop"></i> Backend</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col"> Skills</th>
-                            <th scope="col"> Experience</th>
-                            <th scope="col"> Self </br>Assesment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Java</th>
-                            <td>1 year</td>
-                            <td>★★☆☆☆</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Springboot</th>
-                            <td>1 year</td>
-                            <td>★★☆☆☆</td>
-                        </tr>
-                    </tbody>
-                </table>
+                
             </li>
         </ul>
+
+        <div class="radarChart" style="position: relative; height:40vh; width:30vw">   
+            <canvas id="myRaderChart1"></canvas>
+            <canvas id="myRaderChart2"></canvas>
+            <canvas id="myRaderChart3"></canvas>
+        </div>
+ 
+　
+
+        
+
+
+        
 
     </section>
     <section id="contact">
@@ -224,9 +170,10 @@
               <label for="subject">Subject</label></br>
               <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
               
-              <input type="submit" value="Submit">
+              
           
             </form>
+            <input type="submit" value="Submit">
           </div>
 
     </section>
@@ -243,6 +190,9 @@
         <p class="footer-text">© All rights reserved by KanaNakajima</p>
     </footer>   
     <script src="main.js"></script>
-    <script src="scrollToTop.js"></script>  
-</body>
+    <script src="scrollToTop.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="/js/lib/html5/Chart/Chart.js"></script>                           
+    <script src="radarChart.js"></script>  
+</body> 
 </html>
