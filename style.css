@@ -682,7 +682,12 @@ a.cv:hover {
 　　projects
 ****************/
 .img-work1 {
+  height: 90%;
   width: 90%;
+}
+
+.work1 {
+  padding: 5%;
 }
 
 .img-work2 {
@@ -692,8 +697,156 @@ a.cv:hover {
 }
 
 .img-work {
-  width: 90%;
+  width: 10 0%;
   margin: 10px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#overlay.overlay-on {
+  visibility: visible;
+  opacity: 1;
+}
+
+.button {
+  cursor: pointer;
+  /* カーソル形状 */
+  -webkit-transition: .3s;
+  transition: .3s;
+  /* なめらか変化 */
+}
+
+.button:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  /* 影の設定 */
+  border-radius: 0;
+  /* 角丸 */
+}
+
+.flex {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#overlay-inner {
+  margin: auto;
+  height: 80%;
+  width: 80%;
+  background-color: #FFF;
+  text-align: center;
+}
+
+#open-btn, #close-btn {
+  padding: -1px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  /*画像の下にできる余白を削除*/
+}
+
+/*メイン画像下に余白をつける*/
+.gallery {
+  margin: 0 0 5px 0;
+}
+
+.gallery li {
+  list-style: none;
+  margin: auto;
+  text-align: center;
+}
+
+/*矢印の設定*/
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+  position: absolute;
+  /*絶対配置にする*/
+  z-index: 3;
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #ccc;
+  /*矢印の色*/
+  border-right: 2px solid #ccc;
+  /*矢印の色*/
+  height: 25px;
+  width: 25px;
+}
+
+.work1-title {
+  font-size: 40px;
+}
+
+.inner-img-work1 {
+  width: 50%;
+  margin: 10%;
+}
+
+.inner-img-dummy {
+  width: 30%;
+}
+
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: 20.5%;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: 30%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/*選択するサムネイル画像の設定*/
+.choice-btn li {
+  cursor: pointer;
+  outline: none;
+  background: #333;
+  width: 25% !important;
+  list-style: none;
+}
+
+.choice-btn li img {
+  opacity: 0.4;
+  /*選択されていないものは透過40%*/
+}
+
+.choice-btn li.slick-current img {
+  opacity: 1;
+  /*選択されているものは透過しない*/
 }
 
 /***************
@@ -734,6 +887,9 @@ canvas#myRaderChart3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
+  display: flex;
+  margin: 60px 0;
 }
 
 @media screen and (max-width: 768px) {
