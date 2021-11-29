@@ -146,10 +146,16 @@ document.addEventListener('DOMContentLoaded', function(){
     function overlayToggle() {
       overlay.classList.toggle('overlay-on');
     }
+    
     // 指定した要素に対して上記関数を実行するクリックイベントを設定
-    const clickArea = document.getElementsByClassName('overlay-event');
-    for(let i = 0; i < clickArea.length; i++) {
-      clickArea[i].addEventListener('click', overlayToggle, false);
+    const clickArea1 = document.getElementsByClassName('overlay-event-work1');
+    for(let i = 0; i < clickArea1.length; i++) {
+      clickArea1[i].addEventListener('click', overlayToggle, false);
+    }
+    // 指定した要素に対して上記関数を実行するクリックイベントを設定
+    const clickArea2 = document.getElementsByClassName('overlay-event-work2');
+    for(let i = 0; i < clickArea2.length; i++) {
+      clickArea2[i].addEventListener('click', overlayToggle, false);
     }
     
     // イベントに対してバブリングを停止
