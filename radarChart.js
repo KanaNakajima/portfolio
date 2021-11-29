@@ -146,6 +146,12 @@ document.addEventListener('DOMContentLoaded', function(){
     function overlayToggle() {
       overlay.classList.toggle('overlay-on');
     }
+
+     // オーバレイを開閉する関数
+     const overlay2 = document.getElementById('overlay2');
+     function overlayToggle2() {
+       overlay2.classList.toggle('overlay-on2');
+     }
     
     // 指定した要素に対して上記関数を実行するクリックイベントを設定
     const clickArea1 = document.getElementsByClassName('overlay-event-work1');
@@ -155,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // 指定した要素に対して上記関数を実行するクリックイベントを設定
     const clickArea2 = document.getElementsByClassName('overlay-event-work2');
     for(let i = 0; i < clickArea2.length; i++) {
-      clickArea2[i].addEventListener('click', overlayToggle, false);
+      clickArea2[i].addEventListener('click', overlayToggle2, false);
     }
     
     // イベントに対してバブリングを停止

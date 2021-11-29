@@ -718,7 +718,8 @@ a.cv:hover {
   height: 50px;
 }
 
-.overlay-inner {
+.overlay-inner,
+.overlay-inner2 {
   margin: 100px auto;
   padding: 10px;
   height: 80%;
@@ -755,7 +756,7 @@ a.cv:hover {
   list-style: none;
 }
 
-#overlay {
+#overlay, #overlay2 {
   position: fixed;
   top: 0;
   left: 0;
@@ -769,7 +770,8 @@ a.cv:hover {
   transition: all 0.5s ease-out;
 }
 
-#overlay.overlay-on {
+#overlay.overlay-on,
+#overlay2.overlay-on2 {
   visibility: visible;
   opacity: 1;
 }
