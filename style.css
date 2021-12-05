@@ -752,6 +752,10 @@ a.cv:hover {
   text-align: left;
 }
 
+.close {
+  width: 20px;
+}
+
 #overlay, #overlay2 {
   position: fixed;
   top: 0;
